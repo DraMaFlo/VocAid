@@ -1,0 +1,7 @@
+Romanian--English
+pisica--cat
+caine--dog
+copac--tree
+iarba--grass
+vaca--cow
+cal--horse

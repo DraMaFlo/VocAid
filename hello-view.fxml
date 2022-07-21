@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="data.vocaid.Controller">
+    <children>
+        <Label fx:id="wordToTranslateLabel" alignment="CENTER" layoutY="105.0" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" prefHeight="40.0" prefWidth="300.0" text="Word">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <HBox layoutX="-2.0" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="600.0">
+            <children>
+                <Button fx:id="loadFileButton" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#loadFile" prefHeight="40.0" prefWidth="100.0" text="Load File">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="startButton" disable="true" layoutX="10.0" layoutY="10.0" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#start" prefHeight="40.0" prefWidth="100.0" text="Start">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="switchTranslationButton" disable="true" layoutX="125.0" layoutY="10.0" maxHeight="40.0" maxWidth="130.0" minHeight="40.0" minWidth="130.0" mnemonicParsing="false" onAction="#swap" prefHeight="40.0" prefWidth="130.0" text="Switch Translation">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Label fx:id="languagesTopLabel" alignment="CENTER" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="270.0" text="No file loaded">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <TextField fx:id="translationTextField" alignment="CENTER" disable="true" layoutX="300.0" layoutY="105.0" maxHeight="40.0" maxWidth="280.0" minHeight="40.0" minWidth="280.0" prefHeight="40.0" prefWidth="280.0" promptText="Translation">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </TextField>
+        <ImageView fx:id="checkImage" fitHeight="70.0" fitWidth="70.0" layoutX="500.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true" />
+        <Label fx:id="translateFromLabel" alignment="CENTER" layoutX="15.0" layoutY="73.0" maxHeight="20.0" maxWidth="270.0" minHeight="20.0" minWidth="270.0" prefHeight="20.0" prefWidth="270.0" text="Translate from" textFill="#00000081">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="translateToLabel" alignment="CENTER" layoutX="314.0" layoutY="73.0" maxHeight="20.0" maxWidth="250.0" minHeight="20.0" minWidth="250.0" prefHeight="20.0" prefWidth="250.0" text="Translate to" textFill="#0000008a">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Button fx:id="checkButton" disable="true" layoutX="392.0" layoutY="215.0" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#check" prefHeight="40.0" prefWidth="100.0" text="Check">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <VBox layoutX="14.0" layoutY="210.0" maxHeight="235.0" maxWidth="175.0" minHeight="133.0" minWidth="175.0" prefHeight="183.0" prefWidth="175.0" spacing="15.0">
+            <children>
+                <Label fx:id="progressLabel" text="Progress: ">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="correctLabel" layoutX="10.0" layoutY="10.0" text="Correct:">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="incorrectLabel" layoutX="10.0" layoutY="37.0" text="Incorrect:">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="percentageLabel" layoutX="20.0" layoutY="104.0" text="Score:">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+            </children>
+            <padding>
+                <Insets left="10.0" top="10.0" />
+            </padding>
+        </VBox>
+        <Label fx:id="verificationLabel" alignment="CENTER" layoutX="300.0" layoutY="160.0" maxHeight="40.0" maxWidth="280.0" minHeight="40.0" minWidth="280.0" prefHeight="40.0" prefWidth="280.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
